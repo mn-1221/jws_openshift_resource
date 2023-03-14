@@ -10,8 +10,9 @@ mv /tmp/s2i/src $HOME/src
 
 # build application artifacts
 pushd ${HOME}
-make all
+mvn compile
 
 # install the artifacts
-make install
+mvn package
+mvn install
 popd
