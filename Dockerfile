@@ -15,8 +15,8 @@ FROM image-registry.openshift-image-registry.svc:5000/openshift/jboss-webserver5
 
 # TODO: Install required packages here:
 # RUN yum install -y ... && yum clean all -y
-RUN yum install -y  && yum clean all -y
-RUN gem install asdf
+# RUN yum install -y  && yum clean all -y
+# RUN gem install asdf
 
 # TODO (optional): Copy the builder files into /opt/app-root
 # COPY ./<builder_folder>/ /opt/app-root/
@@ -29,7 +29,7 @@ COPY ./s2i/bin/ /usr/libexec/s2i
 # RUN chown -R 1001:1001 /opt/app-root
 
 # This default user is created in the openshift/base-centos7 image
-USER 1001
+# USER 1001
 
 # TODO: Set the default port for applications built using this image
 EXPOSE 8009
